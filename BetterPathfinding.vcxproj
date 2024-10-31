@@ -155,6 +155,8 @@
     <ClCompile Include="Visual.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="PathAlgorithms.h" />
+    <ClInclude Include="MazeAlgorithms.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="Visual.h" />
   </ItemGroup>

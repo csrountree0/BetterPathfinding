@@ -1,4 +1,12 @@
-﻿  Main.cpp
-  Visual.cpp
-  Generating Code...
+﻿  Visual.cpp
+D:\All programming things\Cpp\BetterPathfinding\BetterPathfinding\Visual.cpp(34,44): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+D:\All programming things\Cpp\BetterPathfinding\BetterPathfinding\Visual.cpp(34,32): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
   BetterPathfinding.vcxproj -> D:\All programming things\Cpp\BetterPathfinding\x64\Debug\BetterPathfinding.exe

@@ -3,11 +3,16 @@
 #include <sfml/Graphics.hpp>
 #include <sfml/Audio.hpp>
 #include <iostream>
+#include "Node.h"
+		// represents each node
 
 
-// runs the main window that everything will be displayed on
-void MainWindowLoop();
 
+
+
+
+void MainWindowLoop();			// runs the main window that everything will be displayed on
+void DrawGrid(sf::RenderWindow& w);				// Draws the grid
 
 
 
