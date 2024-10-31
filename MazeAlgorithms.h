@@ -5,7 +5,7 @@
 #define MAZEALOGRITHMS_H
 #include "Visual.h"
 
-
+void bruteMaze(std::vector<std::vector<Node>>& grid);
 
 
 

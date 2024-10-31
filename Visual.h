@@ -4,11 +4,10 @@
 #include <sfml/Audio.hpp>
 #include <iostream>
 #include "Node.h"
-		// represents each node
 
-
-
-
+extern int rows, columns;
+extern sf::RectangleShape rect;
+extern std::vector<std::vector<Node>> grid;
 
 
 void MainWindowLoop();			// runs the main window that everything will be displayed on

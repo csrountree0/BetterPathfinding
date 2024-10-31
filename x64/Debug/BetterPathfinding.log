@@ -1,12 +1,3 @@
-﻿  Visual.cpp
-D:\All programming things\Cpp\BetterPathfinding\BetterPathfinding\Visual.cpp(34,44): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-D:\All programming things\Cpp\BetterPathfinding\BetterPathfinding\Visual.cpp(34,32): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
+﻿  MazeAlgorithms.cpp
+D:\All programming things\Cpp\BetterPathfinding\BetterPathfinding\MazeAlgorithms.cpp(9,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   BetterPathfinding.vcxproj -> D:\All programming things\Cpp\BetterPathfinding\x64\Debug\BetterPathfinding.exe
