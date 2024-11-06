@@ -3,6 +3,8 @@
 #include <sfml/Graphics.hpp>
 #include <sfml/Audio.hpp>
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 #include "Node.h"
 
 extern int rows, columns;

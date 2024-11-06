@@ -1,13 +1,13 @@
 #include "Visual.h"
 #include "MazeAlgorithms.h"
-
+#include "PathAlgorithms.h"
 
 
 int rows =59, columns = 59;
 sf::RectangleShape rect;
 std::vector<std::vector<Node>> grid(rows);
 bool mazegen = 0;
-
+bool done = 0;
 
 void DrawGrid(sf::RenderWindow& w) {	
 	// Draw the grid
@@ -25,6 +25,12 @@ void DrawGrid(sf::RenderWindow& w) {
 			}
 			else if (grid[i][j].end) {
 				rect.setFillColor(sf::Color::Green);
+			}
+			else if (grid[i][j].path) {
+				rect.setFillColor(sf::Color::Yellow);
+			}
+			else if (grid[i][j].exp) {
+				rect.setFillColor(sf::Color::Magenta);
 			}
 			else {
 				rect.setFillColor(sf::Color::White);
@@ -75,9 +81,11 @@ void MainWindowLoop() {
 
 			if (!mazegen) {
 			//	BacktrackingMaze(grid,window);
-				PrimsMaze(grid);
-				//KruskalsMaze(grid,window);
+				KruskalsMaze(grid,window);
 				mazegen = 1;
+				grid[1][1].start = 1;
+				grid[rows-2][columns-2].end = 1;
+				BackTrackingPath(grid, window);
 			}
 
 		DrawGrid(window);

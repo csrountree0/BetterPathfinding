@@ -1,7 +1,6 @@
 #include "MazeAlgorithms.h"
 #include "Visual.h"
-#include <cstdlib>
-#include <ctime>
+
 //#include <algorithm>
 
 // Randomly place walls around every other node

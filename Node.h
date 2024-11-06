@@ -15,6 +15,7 @@ struct Node
 	bool exp;						//	is explored
 	bool hex;						//	has been considered for next move
 	bool empty;						//	is none of the above
+	bool path;
 
 
 	// for Kruskals
