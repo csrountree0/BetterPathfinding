@@ -17,10 +17,9 @@ struct Node
 	bool empty;						//	is none of the above
 
 
-
-
-
-
+	// for Kruskals
+	Node* kparent;
+	int rank;
 
 };
 

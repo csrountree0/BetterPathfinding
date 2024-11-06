@@ -8,7 +8,7 @@
 extern int rows, columns;
 extern sf::RectangleShape rect;
 extern std::vector<std::vector<Node>> grid;
-
+extern bool mazegen;
 
 void MainWindowLoop();			// runs the main window that everything will be displayed on
 void DrawGrid(sf::RenderWindow& w);				// Draws the grid
