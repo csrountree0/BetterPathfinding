@@ -4,7 +4,7 @@
 //#include <algorithm>
 
 // Randomly place walls around every other node
-void BruteMaze(std::vector<std::vector<Node>>& grid) {
+void BruteMaze(std::vector<std::vector<Node>>& grid,sf::RenderWindow& w) {
 
 
 	// outline the grid with walls
@@ -35,6 +35,7 @@ void BruteMaze(std::vector<std::vector<Node>>& grid) {
 				else {
 					grid[i-1][j].wall = 1;
 				}
+				DrawGrid(w);
 			}
 		}
 	}
@@ -59,9 +60,6 @@ void BacktrackHelper(std::vector<std::vector<Node>>& grid, std::vector<std::vect
 			BacktrackHelper(grid, v, sx, sy, x - 2, y, w);
 		//	break;
 		}
-		else {
-			direction.erase(direction.begin() + ran);
-		}
 	}
 	else if (direction[ran] == 2) {
 		if (y+2 < columns-1 && !v[x][y+2]) {
@@ -73,9 +71,6 @@ void BacktrackHelper(std::vector<std::vector<Node>>& grid, std::vector<std::vect
 			grid[x][y+2].end = 0;
 			BacktrackHelper(grid, v, sx, sy, x, y+2, w);
 			//break;
-		}
-		else {
-			direction.erase(direction.begin() + ran);
 		}
 	}
 	else if (direction[ran] == 3) {
@@ -89,9 +84,7 @@ void BacktrackHelper(std::vector<std::vector<Node>>& grid, std::vector<std::vect
 			BacktrackHelper(grid, v, sx, sy, x + 2, y, w);
 			//break;
 		}
-		else {
-			direction.erase(direction.begin() + ran);
-		}
+	
 	}
 	else {
 		if (y - 2 >0 && !v[x][y - 2]) {
@@ -104,11 +97,9 @@ void BacktrackHelper(std::vector<std::vector<Node>>& grid, std::vector<std::vect
 			BacktrackHelper(grid, v, sx, sy, x, y - 2,w);
 		//	break;
 		}
-		else {
-
-			direction.erase(direction.begin() + ran);
-		}
+		
 	}
+			direction.erase(direction.begin() + ran);
 	}
 	return;
 

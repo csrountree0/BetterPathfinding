@@ -18,19 +18,23 @@ void DrawGrid(sf::RenderWindow& w) {
 
 			// change rect color based on what it represents
 			if (grid[i][j].wall) {
-				rect.setFillColor(sf::Color(16, 16, 16));
+			//	rect.setFillColor(sf::Color(16, 16, 16));
+				rect.setFillColor(sf::Color::Black);
 			}
 			else if (grid[i][j].start) {
-				rect.setFillColor(sf::Color::Red);
+				rect.setFillColor(sf::Color::Green);
 			}
 			else if (grid[i][j].end) {
-				rect.setFillColor(sf::Color::Green);
+				rect.setFillColor(sf::Color::Red);
 			}
 			else if (grid[i][j].path) {
 				rect.setFillColor(sf::Color::Yellow);
 			}
 			else if (grid[i][j].exp) {
 				rect.setFillColor(sf::Color::Magenta);
+			}
+			else if (grid[i][j].hex) {
+				rect.setFillColor(sf::Color(sf::Color(64, 64, 64)));
 			}
 			else {
 				rect.setFillColor(sf::Color::White);
@@ -80,12 +84,14 @@ void MainWindowLoop() {
 		}
 
 			if (!mazegen) {
+				//BruteMaze(grid, window);
 			//	BacktrackingMaze(grid,window);
 				KruskalsMaze(grid,window);
 				mazegen = 1;
 				grid[1][1].start = 1;
 				grid[rows-2][columns-2].end = 1;
-				BackTrackingPath(grid, window);
+			//	BackTrackingPath(grid, window);
+				AStar(grid, window, 1, 1,rows-2,columns-2);
 			}
 
 		DrawGrid(window);

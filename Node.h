@@ -1,6 +1,5 @@
 #ifndef NODE_H
 #define NODE_H
-
 // Node structure which will hold every nodes parent node, explored, gcosts, hcost
 struct Node
 {
@@ -20,8 +19,12 @@ struct Node
 
 	// for Kruskals
 	Node* kparent;
-	int rank;
 
+
+	// for A*
+	int gcost = 0;					// movement cost
+	int hcost = 0;					// heuristic
+	int fcost = 0;					// g+h
 };
 
 
